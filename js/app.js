@@ -30,8 +30,7 @@
 
   let index = null;
   try {
-    const res = await fetch("./data/docs.json");
-    const docs = await res.json();
+    const docs = window.NYYO_DOCS || (await (await fetch("./data/docs.json")).json());
     index = NyyoBM25.buildIndex(docs);
     addMsg(
       "bot",

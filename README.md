@@ -4,13 +4,14 @@
 >
 > **What it does:** A chatbot that answers questions using only the documents you provide (FAQ, policies, product docs) — not random internet answers.
 >
-> **Try it in 1 click:** open the [**live demo**](https://nyyoautomation.github.io/nyyo-docs-chatbot/), click a suggested question (or type your own), and read the answer with its source section.
+> **Try it in 1 click:** open the [**live demo**](https://cdn.jsdelivr.net/gh/nyyoautomation/nyyo-docs-chatbot@main/index.html), click a suggested question (or type your own), and read the answer with its source section.
 >
 > **Business benefit:** fewer repetitive support emails (“shipping time?”, “refund window?”), faster staff onboarding. Typical build from **$250**.
 
 ![Demo](docs/demo.gif)
 
-**Live demo:** https://nyyoautomation.github.io/nyyo-docs-chatbot/  
+**Live demo:** https://cdn.jsdelivr.net/gh/nyyoautomation/nyyo-docs-chatbot@main/index.html  
+*(GitHub Pages URL once enabled: https://nyyoautomation.github.io/nyyo-docs-chatbot/)*  
 **Brand:** [Nyyo Automation](https://github.com/nyyoautomation)
 
 [![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](#)
@@ -61,7 +62,7 @@ I reply with scope, price and ETA. Crypto: USDC / SOL / ETH / BTC.
 <details>
 <summary>🇫🇷 Français</summary>
 
-**Assistant IA sur vos documents.** Essayez la [démo live](https://nyyoautomation.github.io/nyyo-docs-chatbot/) : posez une question sur la FAQ boutique fictive, lisez la réponse et la source.  
+**Assistant IA sur vos documents.** Essayez la [démo live](https://cdn.jsdelivr.net/gh/nyyoautomation/nyyo-docs-chatbot@main/index.html) : posez une question sur la FAQ boutique fictive, lisez la réponse et la source.  
 Bénéfice : moins de tickets support répétitifs. Prestation client à partir de **250 $**. Contact : [LaborX](https://laborx.com/freelancers/users/id475124).
 
 </details>
