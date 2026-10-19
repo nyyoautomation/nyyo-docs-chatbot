@@ -6,7 +6,7 @@
 >
 > **Try it in 1 click:** open the [**live demo**](https://nyyoautomation.github.io/nyyo-docs-chatbot/), click a suggested question (or type your own), and read the answer with its source section.
 >
-> **Business benefit:** fewer repetitive support emails (“shipping time?”, “refund window?”), faster staff onboarding. Typical build from **$250**.
+> **Business benefit:** fewer repetitive support emails (“shipping time?”, “refund window?”), faster staff onboarding. Typical build from **$199**.
 
 ![Demo](docs/demo.gif)
 
@@ -41,7 +41,7 @@ Or just use the live Pages link above.
 | | |
 |---|---|
 | **Product** | RAG chatbot on your PDF / Notion / FAQ — web widget or Telegram |
-| **From** | **$250** |
+| **From** | **$199** |
 | **Includes** | Your docs ingested · source citations · 7-day bugfix · you own the code |
 
 → [Packages & contact](https://github.com/nyyoautomation) · [LaborX — Nyyo Automation](https://laborx.com/freelancers/users/id475124)
@@ -51,7 +51,7 @@ Or just use the live Pages link above.
 1. Open an **issue** on this repo with: goal · deadline · budget  
 2. Or message via **[LaborX — Nyyo Automation](https://laborx.com/freelancers/users/id475124)**
 
-I reply with scope, price and ETA. Crypto: USDC / SOL / ETH / BTC.
+I reply with scope, price and ETA. Crypto: USDC on BNB Chain or Base.
 
 ## Limits (honest)
 
