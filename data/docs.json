@@ -33,7 +33,7 @@
     "id": "privacy",
     "title": "Privacy Snapshot",
     "source": "demo-store/privacy.md",
-    "text": "We collect email, order history, and basic analytics to fulfill orders and improve the site. We never sell personal data. Payment cards are processed by our payment provider; we do not store full card numbers. You can request data export or deletion by emailing privacy@demo-store.example. Cookies: essential cookies are always on; analytics cookies can be refused in the banner. Data is stored in the EU."
+    "text": "We collect email, order history, and basic analytics to fulfill orders and improve the site. We never sell personal data. Payment cards are processed by our payment provider; we do not store full card numbers. You can request data export or deletion by emailing privacy@demo-store.example. Cookies: essential cookies are always on; analytics cookies can be refused in the banner. Data is stored with our hosting provider."
   },
   {
     "id": "faq",
