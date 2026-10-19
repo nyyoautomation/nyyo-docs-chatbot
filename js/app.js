@@ -14,7 +14,7 @@
     "What is your return policy?",
     "How much is the Growth plan?",
     "What are support hours?",
-    "Do you accept crypto?",
+    "Which payment methods do you accept?",
   ];
 
   examples.forEach((q) => {

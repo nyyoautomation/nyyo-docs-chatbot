@@ -54,7 +54,7 @@ Free, GPLv2 or later, no locked features.
 
 The universal script, Shopify snippet and Telegram / Slack / Discord templates are in [`install-kit/`](install-kit/).
 
-## Ask-your-docs full tool (paid license)
+## Ask-your-docs full tool (paid license, coming soon)
 
 A self-hosted tool that loads **your** PDF, DOCX, Markdown, TXT and HTML files, indexes them on your computer
 and answers with the file and page or section of each source. It works offline (no AI), with a 100 % local AI
@@ -69,9 +69,7 @@ Telegram / Slack / Discord templates.
 | Unlimited | **$129** | unlimited sites |
 
 Every license includes a **14-day refund**, **6 months of support** and **12 months of updates**.
-Payment in crypto: USDC on BNB Chain or Base.
-
-**[Order by email](mailto:LaborX (https://laborx.com/freelancers/users/id475124)?subject=Ask-your-docs%20order)**
+Not on sale yet: coming soon. The free WordPress plugin above is available today.
 
 ## Custom build (service)
 
@@ -83,14 +81,13 @@ Payment in crypto: USDC on BNB Chain or Base.
 
 The free 1-click install kit stays included with every custom build. Anything not listed is **on request (free)** with a build.
 
-→ [Packages & contact](https://github.com/nyyoautomation) · [LaborX — Nyyo Automation](https://laborx.com/freelancers/users/id475124)
+→ Available on LaborX · [Profile & packages](https://github.com/nyyoautomation)
 
-## Hire me
+## How to order
 
-1. Open an **issue** on this repo with: goal · deadline · budget  
-2. Or message via **[LaborX — Nyyo Automation](https://laborx.com/freelancers/users/id475124)**
+Available on LaborX · [Profile & packages](https://github.com/nyyoautomation)
 
-I reply with scope, price and ETA. Crypto: USDC on BNB Chain or Base.
+Questions? Ask in your order chat.
 
 ## Limits (honest)
 
@@ -100,4 +97,4 @@ I reply with scope, price and ETA. Crypto: USDC on BNB Chain or Base.
 
 ## License
 
-Code in this repo: GPL-2.0-or-later. See [LICENSE](LICENSE). Contact: LaborX (https://laborx.com/freelancers/users/id475124) · Remote · Worldwide
+Code in this repo: GPL-2.0-or-later. See [LICENSE](LICENSE). Nyyo Automation · Remote · Worldwide

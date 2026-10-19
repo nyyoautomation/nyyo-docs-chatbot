@@ -27,7 +27,7 @@
     "id": "pricing",
     "title": "Pricing & Subscriptions",
     "source": "demo-store/pricing.md",
-    "text": "Starter plan is 9 USD per month and includes 1 user and 100 API calls. Growth plan is 32 USD per month with 5 users and 2,000 API calls. Automation plan is 85 USD per month with unlimited users and priority support. Annual billing saves 20 percent. You can cancel anytime from the billing page; access continues until the end of the paid period. We accept Visa, Mastercard, and crypto (USDC on BNB Chain or Base)."
+    "text": "Starter plan is 9 USD per month and includes 1 user and 100 API calls. Growth plan is 32 USD per month with 5 users and 2,000 API calls. Automation plan is 85 USD per month with unlimited users and priority support. Annual billing saves 20 percent. You can cancel anytime from the billing page; access continues until the end of the paid period. We accept Visa, Mastercard and PayPal."
   },
   {
     "id": "privacy",

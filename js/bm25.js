@@ -50,8 +50,8 @@
       extra.push("pricing", "plan", "usd", "month", "subscription");
     if (/support|hour|contact|open|available/.test(q))
       extra.push("support", "hours", "monday", "friday", "contact", "chat");
-    if (/crypto|usdc|bitcoin|eth|solana|payment|pay/.test(q))
-      extra.push("crypto", "usdc", "visa", "mastercard", "accept");
+    if (/payment|pay|card|method/.test(q))
+      extra.push("visa", "mastercard", "paypal", "accept");
     if (/warrant/.test(q)) extra.push("warranty", "defect", "month");
     if (/privac|gdpr|data/.test(q)) extra.push("privacy", "data", "cookie");
     return query + " " + extra.join(" ");
