@@ -3,7 +3,7 @@
     "id": "shipping",
     "title": "Shipping Policy",
     "source": "demo-store/shipping.md",
-    "text": "Nyyo Demo Store ships worldwide. Standard shipping takes 5 to 8 business days within the EU and 8 to 14 days internationally. Express shipping (2 to 4 business days EU) is available at checkout for an extra fee. Orders over 50 EUR get free standard shipping. We do not ship to PO boxes for express orders. Tracking numbers are emailed within 24 hours of dispatch. If a package is lost in transit, contact support within 30 days for a replacement or refund."
+    "text": "Nyyo Demo Store ships worldwide. Standard shipping takes 5 to 8 business days within the EU and 8 to 14 days internationally. Express shipping (2 to 4 business days EU) is available at checkout for an extra fee. Orders over 50 EUR get free standard shipping within the EU. We do not ship to PO boxes for express orders. Tracking numbers are emailed within 24 hours of dispatch. If a package is lost in transit, contact support within 30 days for a replacement or refund."
   },
   {
     "id": "returns",
