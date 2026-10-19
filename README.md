@@ -36,17 +36,31 @@ python3 -m http.server 8080
 
 Or just use the live Pages link above.
 
-## What’s for sale
+## Free WordPress plugin (GPL)
 
-| | |
-|---|---|
-| **Product** | RAG chatbot on your PDF / Notion / FAQ — web widget or Telegram |
-| **From** | **$149** (Starter) · $299 · $649 — delivery 4 / 6 / 10 days |
-| **Includes** | Your docs ingested · source citations · 7-day bugfix · you own the code |
+[`install-kit/wordpress/nyyo-docs-chatbot/`](install-kit/wordpress/nyyo-docs-chatbot/) answers visitors from the
+site's own published pages and posts, on the site's server, and links the source page of every answer.
+No external service by default; an external chatbot page can be embedded as an opt-in.
+Free, GPLv2 or later, no locked features.
 
-### Ask-your-docs self-service license
+**Download:** [nyyo-docs-chatbot-wordpress.zip](https://nyyoautomation.github.io/nyyo-docs-chatbot/dist/nyyo-docs-chatbot-wordpress.zip) (also in [`dist/`](dist/nyyo-docs-chatbot-wordpress.zip))
 
-The self-hosted tool ([`askdocs/`](askdocs/), with Docker support) and the install kit, for your own documents and sites.
+**Install:**
+
+1. In your WordPress admin, go to **Plugins > Add New Plugin > Upload Plugin**, choose the ZIP, click **Install Now**, then **Activate**.
+2. Go to **Settings > Nyyo Docs Chatbot**. Keep **This site** as the answer source and pick the content types to answer from (Pages and Posts by default).
+3. Add the shortcode `[nyyo_docs_chat]` to a page, or tick **Show a floating chat button on all public pages**. Click **Save Changes**.
+4. Open your site and ask a question. Optional: click **Rebuild index now** after a large import.
+
+The universal script, Shopify snippet and Telegram / Slack / Discord templates are in [`install-kit/`](install-kit/).
+
+## Ask-your-docs full tool (paid license)
+
+A self-hosted tool that loads **your** PDF, DOCX, Markdown, TXT and HTML files, indexes them on your computer
+and answers with the file and page or section of each source. It works offline (no AI), with a 100 % local AI
+through Ollama, or with an online AI using your own API key. Python or Docker, step-by-step install for Mac,
+Windows and Linux. The kit also includes the WordPress plugin, Shopify snippet, universal script and
+Telegram / Slack / Discord templates.
 
 | License | Price | Sites |
 |---|---|---|
@@ -55,10 +69,19 @@ The self-hosted tool ([`askdocs/`](askdocs/), with Docker support) and the insta
 | Unlimited | **$129** | unlimited sites |
 
 Every license includes a **14-day refund**, **6 months of support** and **12 months of updates**.
-The code itself stays GPL-2.0-or-later; the license covers the packaged kit, support and updates.
-[Order by email](mailto:LaborX (https://laborx.com/freelancers/users/id475124)?subject=Ask-your-docs%20order) (crypto: USDC on BNB Chain or Base).
+Payment in crypto: USDC on BNB Chain or Base.
 
-The custom build above is a separate service.
+**[Order by email](mailto:LaborX (https://laborx.com/freelancers/users/id475124)?subject=Ask-your-docs%20order)**
+
+## Custom build (service)
+
+| | |
+|---|---|
+| **Product** | RAG chatbot on your PDF / Notion / FAQ — web widget or Telegram |
+| **From** | **$149** (Starter) · $299 · $649 — delivery 4 / 6 / 10 days |
+| **Includes** | Your docs ingested · source citations · 7-day bugfix · you own the code |
+
+The free 1-click install kit stays included with every custom build. Anything not listed is **on request (free)** with a build.
 
 → [Packages & contact](https://github.com/nyyoautomation) · [LaborX — Nyyo Automation](https://laborx.com/freelancers/users/id475124)
 
@@ -71,52 +94,10 @@ I reply with scope, price and ETA. Crypto: USDC on BNB Chain or Base.
 
 ## Limits (honest)
 
-- This public demo uses **keyword search** over a fixed sample FAQ (fast & free). The `askdocs` tool adds your own documents and optional AI answers (local Ollama or your own API key).
+- This public demo uses **keyword search** over a fixed sample FAQ (fast & free). The paid Ask-your-docs tool adds your own documents and optional AI answers (local Ollama or your own API key).
 - No OCR: scanned PDFs without a text layer are skipped.
 - Not a replacement for legal advice; sample store content is fictional.
 
-
-## Use it on your own documents (self-hosted)
-
-The [`askdocs/`](askdocs/) folder is a small tool that loads **your** PDF, DOCX, Markdown, TXT and HTML files,
-indexes them on your computer and answers with the file and page or section of each source.
-It works offline (no AI), with a 100 % local AI through Ollama, or with an online AI using your own API key.
-Step-by-step install for Mac, Windows and Linux: [askdocs/INSTALL.md](askdocs/INSTALL.md).
-
-```bash
-cd askdocs
-pip install -r requirements.txt
-python askdocs.py index /path/to/your/docs
-python askdocs.py chat
-```
-
-Or with Docker (no Python install needed). Browser chat on http://127.0.0.1:8765:
-
-```bash
-cd askdocs
-DOCS_DIR=/path/to/your/docs docker compose up -d --build
-# optional 100 % local AI with Ollama as a second service:
-DOCS_DIR=/path/to/your/docs ASKDOCS_PROVIDER=ollama docker compose --profile ollama up -d --build
-docker compose exec ollama ollama pull qwen2.5:1.5b
-```
-Details: [askdocs/INSTALL.md](askdocs/INSTALL.md#run-with-docker).
-
-## WordPress plugin
-
-[`install-kit/wordpress/nyyo-docs-chatbot/`](install-kit/wordpress/nyyo-docs-chatbot/) answers visitors from the
-site's own published pages and posts, on the site's server, and links the source page of every answer.
-No external service by default; an external chatbot page can be embedded as an opt-in.
-GPLv2 or later. ZIP: `dist/nyyo-docs-chatbot-wordpress.zip`.
-
-## Downloads
-
-Downloads on the [live demo](https://nyyoautomation.github.io/nyyo-docs-chatbot/#install):
-
-- WordPress plugin ZIP, free (GPLv2 or later): `dist/nyyo-docs-chatbot-wordpress.zip`
-- Full Ask-your-docs kit (tool for your own documents with Docker, WordPress plugin, Shopify snippet, universal script, Telegram/Slack/Discord templates): paid license $29 / $59 / $129, see above. [Order by email](mailto:LaborX (https://laborx.com/freelancers/users/id475124)?subject=Ask-your-docs%20order)
-
-The free 1-click install kit stays included with every custom build. Anything not listed is **on request (free)** with a build.
-
 ## License
 
-GPL-2.0-or-later. See [LICENSE](LICENSE). Contact: LaborX (https://laborx.com/freelancers/users/id475124) · Remote · Worldwide
+Code in this repo: GPL-2.0-or-later. See [LICENSE](LICENSE). Contact: LaborX (https://laborx.com/freelancers/users/id475124) · Remote · Worldwide

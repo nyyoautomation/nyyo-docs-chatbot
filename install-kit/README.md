@@ -5,7 +5,7 @@ The full Ask-your-docs tool is also sold on its own as a self-service license (b
 
 | Artifact | Status |
 |----------|--------|
-| Ask-your-docs tool (your own PDF/DOCX/MD/TXT/HTML, citations) | Ready — `askdocs/`, see `askdocs/INSTALL.md` (Python or Docker) |
+| Ask-your-docs tool (your own PDF/DOCX/MD/TXT/HTML, citations, Python or Docker) | Paid license — [Order by email](mailto:LaborX (https://laborx.com/freelancers/users/id475124)?subject=Ask-your-docs%20order) |
 | WordPress plugin ZIP (answers from your own pages, GPLv2+) | Ready — `dist/nyyo-docs-chatbot-wordpress.zip` |
 | Universal `<script>` embed (Wix/Webflow/HTML) | Ready |
 | Shopify theme snippet | Ready |
