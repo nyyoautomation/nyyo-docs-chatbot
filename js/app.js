@@ -3,9 +3,10 @@
   const inputEl = document.getElementById("q");
   const sendBtn = document.getElementById("send");
   const chipsEl = document.getElementById("chips");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const examples = [
-    "How long does shipping take in the EU?",
+    "How long does shipping take?",
     "What is your return policy?",
     "How much is the Growth plan?",
     "What are support hours?",
@@ -23,9 +24,22 @@
   function addMsg(role, html) {
     const div = document.createElement("div");
     div.className = "msg " + role;
-    div.innerHTML = '<div class="who">' + (role === "user" ? "You" : "Nyyo demo bot") + "</div>" + html;
+    div.innerHTML =
+      '<div class="who">' + (role === "user" ? "You" : "Nyyo demo bot") + "</div>" + html;
     messagesEl.appendChild(div);
     messagesEl.scrollTop = messagesEl.scrollHeight;
+    return div;
+  }
+
+  function addTyping() {
+    const div = document.createElement("div");
+    div.className = "msg bot";
+    div.id = "typing-indicator";
+    div.innerHTML =
+      '<div class="who">Nyyo demo bot</div><div class="typing-row" aria-label="Thinking"><span></span><span></span><span></span></div>';
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+    return div;
   }
 
   let index = null;
@@ -41,10 +55,15 @@
     return;
   }
 
+  let busy = false;
+
   function ask(query) {
     query = (query || "").trim();
-    if (!query || !index) return;
+    if (!query || !index || busy) return;
+    busy = true;
+    sendBtn.disabled = true;
     addMsg("user", escapeHtml(query));
+
     const ans = NyyoBM25.answer(index, query, 3);
     let html = "<p>" + escapeHtml(ans.text) + "</p>";
     if (ans.citations.length) {
@@ -61,7 +80,17 @@
       });
       html += "</div>";
     }
-    addMsg("bot", html);
+
+    const delay = reduceMotion ? 0 : 450 + Math.min(600, query.length * 12);
+    const typing = reduceMotion ? null : addTyping();
+
+    setTimeout(() => {
+      if (typing) typing.remove();
+      addMsg("bot", html);
+      busy = false;
+      sendBtn.disabled = false;
+      inputEl.focus();
+    }, delay);
   }
 
   function escapeHtml(s) {
@@ -75,7 +104,6 @@
   sendBtn.addEventListener("click", () => {
     ask(inputEl.value);
     inputEl.value = "";
-    inputEl.focus();
   });
   inputEl.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {

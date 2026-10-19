@@ -3,7 +3,7 @@
     "id": "shipping",
     "title": "Shipping Policy",
     "source": "demo-store/shipping.md",
-    "text": "Nyyo Demo Store ships worldwide. Standard shipping takes 5 to 8 business days within the EU and 8 to 14 days internationally. Express shipping (2 to 4 business days EU) is available at checkout for an extra fee. Orders over 50 EUR get free standard shipping within the EU. We do not ship to PO boxes for express orders. Tracking numbers are emailed within 24 hours of dispatch. If a package is lost in transit, contact support within 30 days for a replacement or refund."
+    "text": "Nyyo Demo Store ships worldwide. Standard shipping takes 5 to 8 business days within the primary region and 8 to 14 days internationally. Express shipping (2 to 4 business days EU) is available at checkout for an extra fee. Orders over 50 EUR get free standard shipping within the primary region. We do not ship to PO boxes for express orders. Tracking numbers are emailed within 24 hours of dispatch. If a package is lost in transit, contact support within 30 days for a replacement or refund."
   },
   {
     "id": "returns",
@@ -21,7 +21,7 @@
     "id": "hours",
     "title": "Support Hours & Contact",
     "source": "demo-store/support.md",
-    "text": "Customer support is available Monday to Friday, 9:00 to 18:00 Central European Time (CET/CEST). Live chat appears on the site during those hours. Email support@demo-store.example anytime; we reply within one business day. Phone support is for Pro plan customers only. For urgent shipping issues on weekends, leave a message and we will prioritize it Monday morning. We speak English."
+    "text": "Customer support is available Monday to Friday, 9:00 to 18:00 UTC. Live chat appears on the site during those hours. Email support@demo-store.example anytime; we reply within one business day. Phone support is for Pro plan customers only. For urgent shipping issues on weekends, leave a message and we will prioritize it Monday morning. We speak English and other major languages on request."
   },
   {
     "id": "pricing",
@@ -45,6 +45,6 @@
     "id": "sla",
     "title": "Service Level Agreement (Pro)",
     "source": "demo-store/sla.md",
-    "text": "Pro and Automation plans include 99.5 percent monthly uptime target. Planned maintenance is announced 48 hours ahead and scheduled outside EU business hours when possible. Critical incidents (site down) get a first response within 1 hour during support hours. Severity 2 issues get a response within 4 business hours. Credits: if monthly uptime falls below 99.5 percent, you receive a 10 percent credit on the next invoice; below 99 percent, a 25 percent credit."
+    "text": "Pro and Automation plans include 99.5 percent monthly uptime target. Planned maintenance is announced 48 hours ahead and scheduled outside business hours when possible. Critical incidents (site down) get a first response within 1 hour during support hours. Severity 2 issues get a response within 4 business hours. Credits: if monthly uptime falls below 99.5 percent, you receive a 10 percent credit on the next invoice; below 99 percent, a 25 percent credit."
   }
 ]

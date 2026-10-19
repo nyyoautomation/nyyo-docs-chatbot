@@ -2,27 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%230a0f2c%22/%3E%3Ctext x=%2232%22 y=%2245%22 font-size=%2238%22 font-family=%22Arial%22 font-weight=%22700%22 text-anchor=%22middle%22 fill=%22%2339ff88%22%3EN%3C/text%3E%3C/svg%3E" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ask my docs — Nyyo Automation demo</title>
-  <meta name="description" content="Live demo: ask questions on sample business documents. Free in-browser RAG by Nyyo Automation." />
+  <title>Ask my docs — Nyyo Automation live demo</title>
+  <meta name="description" content="Live demo: ask questions on sample business documents. Free in-browser RAG by Nyyo Automation. Hire on LaborX." />
+  <meta name="theme-color" content="#050814" />
+  <link rel="icon" href="./assets/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
   <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="https://github.com/nyyoautomation">
+        <img src="./assets/logo.png" alt="" width="34" height="34" />
+        <span>Nyyo Automation</span>
+      </a>
+      <a class="btn btn-primary" href="https://laborx.com/freelancers/users/id475124" rel="noopener">
+        Hire me <span class="hide-sm">on LaborX</span>
+      </a>
+    </div>
+
     <header class="hero">
-      <span class="tag">Live demo · no signup · no API key</span>
-      <h1>Ask questions on your business documents</h1>
-      <p style="margin:0;color:#9aa8c7;line-height:1.5">
-        This chatbot answers from a sample store FAQ (shipping, returns, pricing…).
-        Same idea for your PDF, Notion or help center — web widget or Telegram.
-      </p>
-      <p class="brand">Nyyo Automation · fixed-price · crypto OK</p>
+      <div class="hero-inner">
+        <span class="tag"><span class="dot" aria-hidden="true"></span> Live demo · no signup · no API key</span>
+        <h1>Ask questions on your <span class="grad">business documents</span></h1>
+        <p class="lead">
+          This chatbot answers from a sample store FAQ (shipping, returns, pricing…).
+          Same idea for your PDF, Notion or help center — web widget or Telegram.
+        </p>
+        <div class="meta" aria-label="Offer">
+          <span><strong>From $250</strong> fixed</span>
+          <span><strong>7-day</strong> bugfix</span>
+          <span><strong>Crypto OK</strong></span>
+          <span><strong>Remote · Worldwide</strong></span>
+        </div>
+      </div>
     </header>
 
     <section class="explainer" aria-label="How to try this">
       <h2>What is this? (plain English)</h2>
-      <p style="margin:0 0 8px;color:#9aa8c7">
+      <p style="margin:0 0 8px;color:var(--muted)">
         A small AI assistant trained only on the documents you give it — so staff and customers get answers from <em>your</em> policies, not the open web.
       </p>
       <ol>
@@ -32,7 +53,7 @@
       </ol>
       <div class="benefit">
         <strong>Business benefit:</strong> cut “where is my order / what’s the refund window?” tickets.
-        Typical client build: from <strong>$250</strong> (your docs → widget or Telegram), with a 7-day bugfix.
+        Typical client build: from <strong>$250</strong> (your docs → widget or Telegram).
       </div>
     </section>
 
@@ -41,21 +62,28 @@
     <div class="chat">
       <div class="messages" id="messages" role="log" aria-live="polite"></div>
       <div class="composer">
-        <input id="q" type="text" placeholder="Ask about shipping, returns, pricing…" autocomplete="off" />
+        <input id="q" type="text" placeholder="Ask about shipping, returns, pricing…" autocomplete="off" aria-label="Your question" />
         <button id="send" type="button">Ask</button>
       </div>
     </div>
 
     <p class="footer">
-      Demo uses keyword search (BM25) over sample docs — runs 100% in your browser, free.
+      Demo uses keyword search (BM25) over sample docs — runs 100% in your browser.
       Want this on <em>your</em> docs?
-      <a href="https://laborx.com/freelancers/users/id475124">Hire Nyyo Automation</a>
+      <a href="https://laborx.com/freelancers/users/id475124">Hire me on LaborX</a>
+      ·
+      <a href="https://nyyoautomation.github.io/nyyoautomation/demos/">All demos</a>
       ·
       <a href="https://github.com/nyyoautomation/nyyo-docs-chatbot">Repo</a>
     </p>
   </div>
+
+  <div class="mobile-cta">
+    <a class="btn btn-primary" href="https://laborx.com/freelancers/users/id475124" rel="noopener">Hire me on LaborX</a>
+  </div>
+
   <script src="./js/bm25.js"></script>
-  <script>window.NYYO_DOCS = [{"id": "shipping", "title": "Shipping Policy", "source": "demo-store/shipping.md", "text": "Nyyo Demo Store ships worldwide. Standard shipping takes 5 to 8 business days within the EU and 8 to 14 days internationally. Express shipping (2 to 4 business days EU) is available at checkout for an extra fee. Orders over 50 EUR get free standard shipping within the EU. We do not ship to PO boxes for express orders. Tracking numbers are emailed within 24 hours of dispatch. If a package is lost in transit, contact support within 30 days for a replacement or refund."}, {"id": "returns", "title": "Returns & Refunds", "source": "demo-store/returns.md", "text": "You may return unused items within 30 days of delivery for a full refund. Items must be in original packaging with tags attached. Opened software and personalized products cannot be returned. To start a return, open a ticket in your account or email returns@demo-store.example. Refunds are processed within 5 business days after we receive the item. Original shipping fees are non-refundable unless the item was defective. Exchange is available for a different size or color while stock lasts."}, {"id": "warranty", "title": "Product Warranty", "source": "demo-store/warranty.md", "text": "All electronics carry a 24-month manufacturer warranty covering defects in materials and workmanship. Accidental damage, water damage, and normal wear are not covered. Register your product within 14 days of purchase on the warranty page to activate coverage. Warranty repairs take 7 to 14 business days. For out-of-warranty repairs we provide a fixed-price quote before any work starts. Keep your invoice as proof of purchase."}, {"id": "hours", "title": "Support Hours & Contact", "source": "demo-store/support.md", "text": "Customer support is available Monday to Friday, 9:00 to 18:00 Central European Time (CET/CEST). Live chat appears on the site during those hours. Email support@demo-store.example anytime; we reply within one business day. Phone support is for Pro plan customers only. For urgent shipping issues on weekends, leave a message and we will prioritize it Monday morning. We speak English."}, {"id": "pricing", "title": "Pricing & Subscriptions", "source": "demo-store/pricing.md", "text": "Starter plan is 9 EUR per month and includes 1 user and 100 API calls. Growth plan is 29 EUR per month with 5 users and 2,000 API calls. Automation plan is 79 EUR per month with unlimited users and priority support. Annual billing saves 20 percent. You can cancel anytime from the billing page; access continues until the end of the paid period. We accept Visa, Mastercard, and crypto (USDC on Solana or Ethereum)."}, {"id": "privacy", "title": "Privacy Snapshot", "source": "demo-store/privacy.md", "text": "We collect email, order history, and basic analytics to fulfill orders and improve the site. We never sell personal data. Payment cards are processed by our payment provider; we do not store full card numbers. You can request data export or deletion by emailing privacy@demo-store.example. Cookies: essential cookies are always on; analytics cookies can be refused in the banner. Data is stored in the EU."}, {"id": "faq", "title": "FAQ — Orders", "source": "demo-store/faq.md", "text": "How do I change my shipping address? Edit it in your account before the order status becomes Shipped. Can I cancel an order? Yes, within 2 hours of placing it from the Orders page. Do you offer student discounts? Yes, 15 percent off Starter and Growth with a valid .edu email. Is gift wrapping available? Yes, add Gift Wrap at checkout for 3 EUR. What if an item is out of stock after I ordered? We email you within 24 hours with a refund or substitute option."}, {"id": "sla", "title": "Service Level Agreement (Pro)", "source": "demo-store/sla.md", "text": "Pro and Automation plans include 99.5 percent monthly uptime target. Planned maintenance is announced 48 hours ahead and scheduled outside EU business hours when possible. Critical incidents (site down) get a first response within 1 hour during support hours. Severity 2 issues get a response within 4 business hours. Credits: if monthly uptime falls below 99.5 percent, you receive a 10 percent credit on the next invoice; below 99 percent, a 25 percent credit."}];</script>
+  <script>window.NYYO_DOCS = [{"id": "shipping", "title": "Shipping Policy", "source": "demo-store/shipping.md", "text": "Nyyo Demo Store ships worldwide. Standard shipping takes 5 to 8 business days within the primary region and 8 to 14 days internationally. Express shipping (2 to 4 business days) is available at checkout for an extra fee. Orders over 50 EUR get free standard shipping in the primary region. We do not ship to PO boxes for express orders. Tracking numbers are emailed within 24 hours of dispatch. If a package is lost in transit, contact support within 30 days for a replacement or refund."}, {"id": "returns", "title": "Returns & Refunds", "source": "demo-store/returns.md", "text": "You may return unused items within 30 days of delivery for a full refund. Items must be in original packaging with tags attached. Opened software and personalized products cannot be returned. To start a return, open a ticket in your account or email returns@demo-store.example. Refunds are processed within 5 business days after we receive the item. Original shipping fees are non-refundable unless the item was defective. Exchange is available for a different size or color while stock lasts."}, {"id": "warranty", "title": "Product Warranty", "source": "demo-store/warranty.md", "text": "All electronics carry a 24-month manufacturer warranty covering defects in materials and workmanship. Accidental damage, water damage, and normal wear are not covered. Register your product within 14 days of purchase on the warranty page to activate coverage. Warranty repairs take 7 to 14 business days. For out-of-warranty repairs we provide a fixed-price quote before any work starts. Keep your invoice as proof of purchase."}, {"id": "hours", "title": "Support Hours & Contact", "source": "demo-store/support.md", "text": "Customer support is available Monday to Friday, 9:00 to 18:00 UTC. Live chat appears on the site during those hours. Email support@demo-store.example anytime; we reply within one business day. Phone support is for Pro plan customers only. For urgent shipping issues on weekends, leave a message and we will prioritize it Monday morning. We speak English and other major languages on request."}, {"id": "pricing", "title": "Pricing & Subscriptions", "source": "demo-store/pricing.md", "text": "Starter plan is 9 EUR per month and includes 1 user and 100 API calls. Growth plan is 29 EUR per month with 5 users and 2,000 API calls. Automation plan is 79 EUR per month with unlimited users and priority support. Annual billing saves 20 percent. You can cancel anytime from the billing page; access continues until the end of the paid period. We accept Visa, Mastercard, and crypto (USDC on Solana or Ethereum)."}, {"id": "privacy", "title": "Privacy Snapshot", "source": "demo-store/privacy.md", "text": "We collect email, order history, and basic analytics to fulfill orders and improve the site. We never sell personal data. Payment cards are processed by our payment provider; we do not store full card numbers. You can request data export or deletion by emailing privacy@demo-store.example. Cookies: essential cookies are always on; analytics cookies can be refused in the banner. Data is stored in the EU."}, {"id": "faq", "title": "FAQ — Orders", "source": "demo-store/faq.md", "text": "How do I change my shipping address? Edit it in your account before the order status becomes Shipped. Can I cancel an order? Yes, within 2 hours of placing it from the Orders page. Do you offer student discounts? Yes, 15 percent off Starter and Growth with a valid .edu email. Is gift wrapping available? Yes, add Gift Wrap at checkout for 3 EUR. What if an item is out of stock after I ordered? We email you within 24 hours with a refund or substitute option."}, {"id": "sla", "title": "Service Level Agreement (Pro)", "source": "demo-store/sla.md", "text": "Pro and Automation plans include 99.5 percent monthly uptime target. Planned maintenance is announced 48 hours ahead and scheduled outside business hours when possible. Critical incidents (site down) get a first response within 1 hour during support hours. Severity 2 issues get a response within 4 business hours. Credits: if monthly uptime falls below 99.5 percent, you receive a 10 percent credit on the next invoice; below 99 percent, a 25 percent credit."}];</script>
   <script src="./js/app.js"></script>
 </body>
 </html>
