@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ask my docs — Nyyo Automation demo</title>
+  <meta name="description" content="Live demo: ask questions on sample business documents. Free in-browser RAG by Nyyo Automation." />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <span class="tag">Live demo · no signup · no API key</span>
+      <h1>Ask questions on your business documents</h1>
+      <p style="margin:0;color:#9aa8c7;line-height:1.5">
+        This chatbot answers from a sample store FAQ (shipping, returns, pricing…).
+        Same idea for your PDF, Notion or help center — web widget or Telegram.
+      </p>
+      <p class="brand">Nyyo Automation · fixed-price · crypto OK</p>
+    </header>
+
+    <section class="explainer" aria-label="How to try this">
+      <h2>What is this? (plain English)</h2>
+      <p style="margin:0 0 8px;color:#9aa8c7">
+        A small AI assistant trained only on the documents you give it — so staff and customers get answers from <em>your</em> policies, not the open web.
+      </p>
+      <ol>
+        <li>Click a suggested question below, or type your own.</li>
+        <li>Read the answer and the source section it came from.</li>
+        <li>That’s the product: fewer repetitive support emails, faster onboarding.</li>
+      </ol>
+      <div class="benefit">
+        <strong>Business benefit:</strong> cut “where is my order / what’s the refund window?” tickets.
+        Typical client build: from <strong>$250</strong> (your docs → widget or Telegram), with a 7-day bugfix.
+      </div>
+    </section>
+
+    <div class="chips" id="chips" aria-label="Suggested questions"></div>
+
+    <div class="chat">
+      <div class="messages" id="messages" role="log" aria-live="polite"></div>
+      <div class="composer">
+        <input id="q" type="text" placeholder="Ask about shipping, returns, pricing…" autocomplete="off" />
+        <button id="send" type="button">Ask</button>
+      </div>
+    </div>
+
+    <p class="footer">
+      Demo uses keyword search (BM25) over sample docs — runs 100% in your browser, free.
+      Want this on <em>your</em> docs?
+      <a href="https://laborx.com/freelancers/users/id475124">Hire Nyyo Automation</a>
+      ·
+      <a href="https://github.com/nyyoautomation/nyyo-docs-chatbot">Repo</a>
+    </p>
+  </div>
+  <script src="./js/bm25.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
