@@ -57,3 +57,13 @@ I reply with scope, price and ETA. Crypto: USDC / SOL / ETH / BTC.
 
 - This public demo uses **keyword search** over a fixed sample FAQ (fast & free). Client builds can use embeddings / LLM APIs when you provide a key or budget.
 - Not a replacement for legal advice; sample store content is fictional.
+
+
+## Free install kit included
+
+No add-on fee. Downloads on the [live demo](https://nyyoautomation.github.io/nyyo-docs-chatbot/#install):
+
+- WordPress plugin ZIP (`dist/nyyo-docs-chatbot-wordpress.zip`)
+- Full kit ZIP (`dist/nyyo-docs-chatbot-install-kit.zip`) — Shopify snippet, universal script, Telegram/Slack/Discord templates
+
+Anything not listed is **on request (free)**.

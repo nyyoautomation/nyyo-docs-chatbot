@@ -1,0 +1,6 @@
+{
+  "name": "nyyo-docs-discord-template",
+  "private": true,
+  "type": "module",
+  "dependencies": { "discord.js": "^14.16.3" }
+}

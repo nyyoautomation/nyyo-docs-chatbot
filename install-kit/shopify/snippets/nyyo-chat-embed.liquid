@@ -1,0 +1,14 @@
+{% comment %}
+  Nyyo Docs Chatbot — theme app embed snippet (free install kit)
+  1. Copy this file to your theme: snippets/nyyo-chat-embed.liquid
+  2. In layout/theme.liquid before </body>: {% render 'nyyo-chat-embed' %}
+  3. Or Online Store → Themes → Customize → App embeds (if wrapped as app block later)
+{% endcomment %}
+{% assign nyyo_bot_url = settings.nyyo_bot_url | default: 'https://nyyoautomation.github.io/nyyo-docs-chatbot/' %}
+{% assign nyyo_label = settings.nyyo_chat_label | default: 'Ask docs' %}
+<script
+  src="{{ 'nyyo-chat.js' | asset_url }}"
+  data-bot-url="{{ nyyo_bot_url | escape }}"
+  data-label="{{ nyyo_label | escape }}"
+  data-position="bottom-right"
+  defer></script>

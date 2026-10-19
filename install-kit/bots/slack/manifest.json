@@ -1,0 +1,25 @@
+{
+  "display_information": {
+    "name": "Nyyo Docs Chat",
+    "description": "Open your Nyyo docs assistant from Slack (free install kit)",
+    "background_color": "#0a0f2c"
+  },
+  "features": {
+    "bot_user": { "display_name": "Nyyo Docs", "always_online": true },
+    "slash_commands": [
+      {
+        "command": "/nyyo-docs",
+        "description": "Open the docs chatbot link",
+        "should_escape": false
+      }
+    ]
+  },
+  "oauth_config": {
+    "scopes": { "bot": ["commands", "chat:write"] }
+  },
+  "settings": {
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": true,
+    "token_rotation_enabled": false
+  }
+}
