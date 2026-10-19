@@ -58,11 +58,3 @@ I reply with scope, price and ETA. Crypto: USDC / SOL / ETH / BTC.
 
 - This public demo uses **keyword search** over a fixed sample FAQ (fast & free). Client builds can use embeddings / LLM APIs when you provide a key or budget.
 - Not a replacement for legal advice; sample store content is fictional.
-
-<details>
-<summary>🇫🇷 Français</summary>
-
-**Assistant IA sur vos documents.** Essayez la [démo live](https://cdn.jsdelivr.net/gh/nyyoautomation/nyyo-docs-chatbot@main/index.html) : posez une question sur la FAQ boutique fictive, lisez la réponse et la source.  
-Bénéfice : moins de tickets support répétitifs. Prestation client à partir de **250 $**. Contact : [LaborX](https://laborx.com/freelancers/users/id475124).
-
-</details>
