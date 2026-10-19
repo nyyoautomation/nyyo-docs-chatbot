@@ -253,5 +253,6 @@ python tests/test_e2e.py --provider ollama   # local AI
 | Unlimited | **$129** | unlimited sites |
 
 Every license includes a 14-day refund, 6 months of support and 12 months of updates.
+[Order by email](mailto:LaborX (https://laborx.com/freelancers/users/id475124)?subject=Ask-your-docs%20order).
 
 Questions: LaborX (https://laborx.com/freelancers/users/id475124) · Remote · Worldwide

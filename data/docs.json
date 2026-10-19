@@ -3,7 +3,7 @@
     "id": "shipping",
     "title": "Shipping Policy",
     "source": "demo-store/shipping.md",
-    "text": "Nyyo Demo Store ships worldwide. Standard shipping takes 5 to 8 business days within the primary region and 8 to 14 days internationally. Express shipping (2 to 4 business days EU) is available at checkout for an extra fee. Orders over 50 EUR get free standard shipping within the primary region. We do not ship to PO boxes for express orders. Tracking numbers are emailed within 24 hours of dispatch. If a package is lost in transit, contact support within 30 days for a replacement or refund."
+    "text": "Nyyo Demo Store ships worldwide. Standard shipping takes 5 to 8 business days within the primary region and 8 to 14 days internationally. Express shipping (2 to 4 business days) is available at checkout for an extra fee. Orders over 55 USD get free standard shipping in the primary region. We do not ship to PO boxes for express orders. Tracking numbers are emailed within 24 hours of dispatch. If a package is lost in transit, contact support within 30 days for a replacement or refund."
   },
   {
     "id": "returns",
@@ -27,7 +27,7 @@
     "id": "pricing",
     "title": "Pricing & Subscriptions",
     "source": "demo-store/pricing.md",
-    "text": "Starter plan is 9 EUR per month and includes 1 user and 100 API calls. Growth plan is 29 EUR per month with 5 users and 2,000 API calls. Automation plan is 79 EUR per month with unlimited users and priority support. Annual billing saves 20 percent. You can cancel anytime from the billing page; access continues until the end of the paid period. We accept Visa, Mastercard, and crypto (USDC on Solana or Ethereum)."
+    "text": "Starter plan is 9 USD per month and includes 1 user and 100 API calls. Growth plan is 32 USD per month with 5 users and 2,000 API calls. Automation plan is 85 USD per month with unlimited users and priority support. Annual billing saves 20 percent. You can cancel anytime from the billing page; access continues until the end of the paid period. We accept Visa, Mastercard, and crypto (USDC on BNB Chain or Base)."
   },
   {
     "id": "privacy",
@@ -39,7 +39,7 @@
     "id": "faq",
     "title": "FAQ — Orders",
     "source": "demo-store/faq.md",
-    "text": "How do I change my shipping address? Edit it in your account before the order status becomes Shipped. Can I cancel an order? Yes, within 2 hours of placing it from the Orders page. Do you offer student discounts? Yes, 15 percent off Starter and Growth with a valid .edu email. Is gift wrapping available? Yes, add Gift Wrap at checkout for 3 EUR. What if an item is out of stock after I ordered? We email you within 24 hours with a refund or substitute option."
+    "text": "How do I change my shipping address? Edit it in your account before the order status becomes Shipped. Can I cancel an order? Yes, within 2 hours of placing it from the Orders page. Do you offer student discounts? Yes, 15 percent off Starter and Growth with a valid .edu email. Is gift wrapping available? Yes, add Gift Wrap at checkout for 3 USD. What if an item is out of stock after I ordered? We email you within 24 hours with a refund or substitute option."
   },
   {
     "id": "sla",

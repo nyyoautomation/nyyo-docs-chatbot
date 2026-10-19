@@ -3,7 +3,7 @@
  * Plugin Name:       Nyyo Docs Chatbot
  * Plugin URI:        https://github.com/nyyoautomation/nyyo-docs-chatbot
  * Description:       A chatbot that answers visitors from your own published pages and posts, and shows the source page of every answer. Shortcode or floating widget. Runs on your site, no external service by default.
- * Version:           1.1.0
+ * Version:           1.1.1
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Author:            Nyyo Automation
@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'NYYO_DOCS_CHAT_VERSION', '1.1.0' );
+define( 'NYYO_DOCS_CHAT_VERSION', '1.1.1' );
 define( 'NYYO_DOCS_CHAT_OPT', 'nyyo_docs_chat_settings' );
 define( 'NYYO_DOCS_CHAT_INDEX_OPT', 'nyyo_docs_chat_index' );
 define( 'NYYO_DOCS_CHAT_MAX_POSTS', 500 );

@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Rebuild the downloadable ZIPs in dist/ (and the copy in install-kit/dist/). Python 3 only, no zip binary needed."""
+"""Rebuild the ZIPs. Python 3 only, no zip binary needed.
+
+- dist/nyyo-docs-chatbot-wordpress.zip (+ copy in install-kit/dist/): free WordPress plugin, published on Pages.
+- release/nyyo-docs-chatbot-install-kit.zip: full paid Ask-your-docs kit, delivered to buyers only.
+  release/ is git-ignored, so it is never committed or served by GitHub Pages.
+"""
 import os, shutil, zipfile
 from pathlib import Path
 
@@ -28,7 +33,7 @@ def build(out: Path, items, base: Path):
 
 wp = ROOT / "dist" / "nyyo-docs-chatbot-wordpress.zip"
 build(wp, ["install-kit/wordpress/nyyo-docs-chatbot"], ROOT / "install-kit" / "wordpress")
-build(ROOT / "dist" / "nyyo-docs-chatbot-install-kit.zip",
+build(ROOT / "release" / "nyyo-docs-chatbot-install-kit.zip",
       ["LICENSE", "askdocs", "install-kit/README.md", "install-kit/wordpress", "install-kit/shopify",
        "install-kit/universal", "install-kit/bots"], ROOT)
 shutil.copyfile(wp, ROOT / "install-kit" / "dist" / "nyyo-docs-chatbot-wordpress.zip")

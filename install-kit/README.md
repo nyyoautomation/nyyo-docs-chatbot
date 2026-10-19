@@ -1,6 +1,7 @@
-# Docs chatbot — free install kit
+# Docs chatbot — install kit
 
-**Install kit: free, included with every package.** No add-on fee for plugins, snippets, or bot templates.
+**Included free with every custom build** (no add-on fee for plugins, snippets, or bot templates).
+The full Ask-your-docs tool is also sold on its own as a self-service license (below). The WordPress plugin alone is free (GPLv2 or later).
 
 | Artifact | Status |
 |----------|--------|
@@ -26,4 +27,4 @@ Open each folder’s README for install steps.
 
 Every license includes a **14-day refund**, **6 months of support** and **12 months of updates**.
 The code itself stays GPL-2.0-or-later; the license covers the packaged kit, support and updates.
-To get a license, email LaborX (https://laborx.com/freelancers/users/id475124) (crypto: USDC on BNB Chain or Base).
+[Order by email](mailto:LaborX (https://laborx.com/freelancers/users/id475124)?subject=Ask-your-docs%20order) (crypto: USDC on BNB Chain or Base).

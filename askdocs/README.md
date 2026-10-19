@@ -48,6 +48,6 @@ wording between question and document can miss; answers need human review.
 
 Every license includes a **14-day refund**, **6 months of support** and **12 months of updates**.
 The code itself stays GPL-2.0-or-later; the license covers the packaged kit, support and updates.
-To get a license, email LaborX (https://laborx.com/freelancers/users/id475124) (crypto: USDC on BNB Chain or Base).
+[Order by email](mailto:LaborX (https://laborx.com/freelancers/users/id475124)?subject=Ask-your-docs%20order) (crypto: USDC on BNB Chain or Base).
 
 License: GPL-2.0-or-later (see ../LICENSE). Contact: LaborX (https://laborx.com/freelancers/users/id475124) · Remote · Worldwide

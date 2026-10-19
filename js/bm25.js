@@ -45,9 +45,9 @@
     const extra = [];
     if (/ship|deliver|transit|postage/.test(q)) extra.push("shipping", "delivery", "days", "standard", "express");
     if (/return|refund|exchange/.test(q)) extra.push("return", "refund", "unused", "days");
-    if (/growth/.test(q)) extra.push("growth", "plan", "pricing", "eur", "month");
+    if (/growth/.test(q)) extra.push("growth", "plan", "pricing", "usd", "month");
     else if (/price|pricing|plan|subscription|cost|how much/.test(q))
-      extra.push("pricing", "plan", "eur", "month", "subscription");
+      extra.push("pricing", "plan", "usd", "month", "subscription");
     if (/support|hour|contact|open|available/.test(q))
       extra.push("support", "hours", "monday", "friday", "contact", "chat");
     if (/crypto|usdc|bitcoin|eth|solana|payment|pay/.test(q))
@@ -120,7 +120,7 @@
     for (const t of toks) if (qSet.has(t)) overlap++;
     // Prefer declarative answer-like sentences
     let bonus = 0;
-    if (/\b(takes?|is|are|include|accept|available|monday|within|eur|percent|hours?)\b/i.test(sent)) bonus += 0.5;
+    if (/\b(takes?|is|are|include|accept|available|monday|within|usd|percent|hours?)\b/i.test(sent)) bonus += 0.5;
     if (isQuestionSentence(sent)) bonus -= 3;
     // Prefer denser overlap relative to length
     const dens = toks.length ? overlap / toks.length : 0;

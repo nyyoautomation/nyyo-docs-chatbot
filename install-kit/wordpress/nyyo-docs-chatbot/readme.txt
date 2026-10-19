@@ -4,7 +4,7 @@ Tags: chatbot, faq, knowledge base, search, support
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,10 +111,13 @@ The plugin does not set cookies, does not track visitors, and does not store the
 
 == Changelog ==
 
+= 1.1.1 =
+* Changed: the External chatbot URL is empty by default. External mode only works after an administrator enters the URL of their own chatbot page; without one, the plugin stays in This site mode.
+* Docs: readme updated (description, FAQ, External services section).
+
 = 1.1.0 =
 * New: answers from your own published content (local index and search on your server), with source links. This is now the default.
 * New: External mode is opt-in; no external request is made by default.
-* New: the External chatbot URL is empty by default. External mode needs a URL entered by the administrator.
 * New: content type selection, welcome message, sources per answer, "Rebuild index" button, settings link.
 * New: translation-ready strings, uninstall cleanup.
 * Changed: license is now GPLv2 or later.
@@ -123,6 +126,9 @@ The plugin does not set cookies, does not track visitors, and does not store the
 * Initial release: shortcode, floating widget and settings page.
 
 == Upgrade Notice ==
+
+= 1.1.1 =
+The External chatbot URL is now empty by default. Sites already using External mode keep their saved URL.
 
 = 1.1.0 =
 The chatbot now answers from your own content by default. If you used an external chatbot URL, select "External chatbot page" in the settings again.

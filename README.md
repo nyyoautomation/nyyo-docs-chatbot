@@ -56,7 +56,7 @@ The self-hosted tool ([`askdocs/`](askdocs/), with Docker support) and the insta
 
 Every license includes a **14-day refund**, **6 months of support** and **12 months of updates**.
 The code itself stays GPL-2.0-or-later; the license covers the packaged kit, support and updates.
-To get a license, email LaborX (https://laborx.com/freelancers/users/id475124) (crypto: USDC on BNB Chain or Base).
+[Order by email](mailto:LaborX (https://laborx.com/freelancers/users/id475124)?subject=Ask-your-docs%20order) (crypto: USDC on BNB Chain or Base).
 
 The custom build above is a separate service.
 
@@ -108,14 +108,14 @@ site's own published pages and posts, on the site's server, and links the source
 No external service by default; an external chatbot page can be embedded as an opt-in.
 GPLv2 or later. ZIP: `dist/nyyo-docs-chatbot-wordpress.zip`.
 
-## Free install kit included
+## Downloads
 
-No add-on fee. Downloads on the [live demo](https://nyyoautomation.github.io/nyyo-docs-chatbot/#install):
+Downloads on the [live demo](https://nyyoautomation.github.io/nyyo-docs-chatbot/#install):
 
-- WordPress plugin ZIP (`dist/nyyo-docs-chatbot-wordpress.zip`)
-- Full kit ZIP (`dist/nyyo-docs-chatbot-install-kit.zip`) — Ask-your-docs tool for your own documents, WordPress plugin, Shopify snippet, universal script, Telegram/Slack/Discord templates
+- WordPress plugin ZIP, free (GPLv2 or later): `dist/nyyo-docs-chatbot-wordpress.zip`
+- Full Ask-your-docs kit (tool for your own documents with Docker, WordPress plugin, Shopify snippet, universal script, Telegram/Slack/Discord templates): paid license $29 / $59 / $129, see above. [Order by email](mailto:LaborX (https://laborx.com/freelancers/users/id475124)?subject=Ask-your-docs%20order)
 
-Anything not listed is **on request (free)**.
+The free 1-click install kit stays included with every custom build. Anything not listed is **on request (free)** with a build.
 
 ## License
 
