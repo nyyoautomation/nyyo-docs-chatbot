@@ -5,6 +5,10 @@
   const chipsEl = document.getElementById("chips");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  // Always start at the top so hero + intro are visible
+  window.scrollTo(0, 0);
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+
   const examples = [
     "How long does shipping take?",
     "What is your return policy?",
@@ -89,7 +93,7 @@
       addMsg("bot", html);
       busy = false;
       sendBtn.disabled = false;
-      inputEl.focus();
+      // Do not focus input — focuses scroll the page on mobile and hide the hero
     }, delay);
   }
 
