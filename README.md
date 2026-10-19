@@ -6,7 +6,7 @@
 >
 > **Try it in 1 click:** open the [**live demo**](https://nyyoautomation.github.io/nyyo-docs-chatbot/), click a suggested question (or type your own), and read the answer with its source section.
 >
-> **Business benefit:** fewer repetitive support emails (“shipping time?”, “refund window?”), faster staff onboarding. Typical build from **$199**.
+> **Business benefit:** fewer repetitive support emails (“shipping time?”, “refund window?”), faster staff onboarding. Typical build from **$149**. Delivery: 4 / 6 / 10 days by tier.
 
 ![Demo](docs/demo.gif)
 
@@ -41,7 +41,7 @@ Or just use the live Pages link above.
 | | |
 |---|---|
 | **Product** | RAG chatbot on your PDF / Notion / FAQ — web widget or Telegram |
-| **From** | **$199** |
+| **From** | **$149** (Starter) · $299 · $649 — delivery 4 / 6 / 10 days |
 | **Includes** | Your docs ingested · source citations · 7-day bugfix · you own the code |
 
 → [Packages & contact](https://github.com/nyyoautomation) · [LaborX — Nyyo Automation](https://laborx.com/freelancers/users/id475124)
