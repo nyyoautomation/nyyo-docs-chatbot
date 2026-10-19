@@ -1,0 +1,41 @@
+# Ask-your-docs with Docker Compose.
+#
+#   docker compose up -d --build                       # offline mode, browser chat on http://127.0.0.1:8765
+#   DOCS_DIR=/path/to/your/docs docker compose up -d   # use YOUR documents (read-only mount)
+#   ASKDOCS_PROVIDER=ollama docker compose --profile ollama up -d   # + 100 % local AI (Ollama)
+#
+# Full guide: INSTALL.md, section "Run with Docker".
+# License: GPL-2.0-or-later. Contact: LaborX (https://laborx.com/freelancers/users/id475124)
+
+services:
+  askdocs:
+    build: .
+    image: nyyo-askdocs:1.0.0
+    restart: unless-stopped
+    ports:
+      # Only reachable from this computer. Change to "8765:8765" only if you know you want LAN access.
+      - "127.0.0.1:${ASKDOCS_PORT:-8765}:8765"
+    volumes:
+      - "${DOCS_DIR:-./sample-docs}:/docs:ro"
+      - askdocs-index:/data
+    environment:
+      ASKDOCS_PROVIDER: "${ASKDOCS_PROVIDER:-none}"
+      ASKDOCS_MODEL: "${ASKDOCS_MODEL:-}"
+      OLLAMA_HOST: "http://ollama:11434"
+      # Online AI with your own key: set these in your shell or in a .env file next to this file.
+      OPENAI_API_KEY: "${OPENAI_API_KEY:-}"
+      OPENAI_BASE_URL: "${OPENAI_BASE_URL:-https://api.openai.com/v1}"
+
+  # Optional local AI. Starts only with:  docker compose --profile ollama up -d
+  # Then download a model once:          docker compose exec ollama ollama pull qwen2.5:1.5b
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["ollama"]
+    restart: unless-stopped
+    volumes:
+      - ollama-models:/root/.ollama
+    # No published port: only the askdocs container talks to it.
+
+volumes:
+  askdocs-index:
+  ollama-models:

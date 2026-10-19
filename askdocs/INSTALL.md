@@ -4,6 +4,7 @@ Load your own documents (PDF, DOCX, Markdown, TXT, HTML), index them, and chat w
 Every answer shows the file and page or section it came from.
 
 Time needed: about 10 minutes the first time. No account needed with us.
+Prefer Docker? Jump to [Run with Docker](#run-with-docker).
 
 > Human review: answers are drawn from your documents, but a person should check
 > anything important before acting on it, especially with AI modes.
@@ -157,6 +158,64 @@ export documents that are meant to be public.
 
 ---
 
+## Run with Docker
+
+Skip steps 1 to 3 if you prefer Docker: no Python install is needed.
+
+**1. Install Docker**
+- Mac / Windows: install **Docker Desktop** from https://www.docker.com/products/docker-desktop/ and start it.
+- Linux: install Docker Engine and the Compose plugin (https://docs.docker.com/engine/install/).
+- Check in a terminal: `docker compose version`.
+
+**2. Start the browser chat on your documents**
+
+In a terminal, go into the `askdocs` folder (step 2 above), then:
+
+**Mac / Linux**
+```bash
+DOCS_DIR="/path/to/your/docs" docker compose up -d --build
+```
+**Windows (PowerShell)**
+```powershell
+$env:DOCS_DIR = "C:\Users\you\Documents\Policies"
+docker compose up -d --build
+```
+
+Open http://127.0.0.1:8765 and ask a question. Without `DOCS_DIR`, the fictional sample documents are used.
+
+What happens:
+- Your folder is mounted **read-only** at `/docs` inside the container. The tool never changes your files.
+- At every start the container indexes the folder, then serves the browser chat. The index is kept in a Docker volume (`askdocs-index`).
+- The chat is published on `127.0.0.1` only, so it is reachable from this computer only.
+
+**3. Day-to-day commands**
+```bash
+docker compose restart askdocs          # re-index after you add or change documents
+docker compose run --rm askdocs ask "What is our refund window?"   # one question in the terminal
+docker compose logs askdocs             # see which files were indexed or skipped
+docker compose down                     # stop (add -v to also delete the index)
+```
+Port 8765 already used? Start with `ASKDOCS_PORT=8766` (PowerShell: `$env:ASKDOCS_PORT = "8766"`) and open that port instead.
+
+**4. Optional: 100 % local AI with Ollama as a second container**
+```bash
+DOCS_DIR="/path/to/your/docs" ASKDOCS_PROVIDER=ollama docker compose --profile ollama up -d --build
+docker compose exec ollama ollama pull qwen2.5:1.5b      # once, about 1 GB
+```
+(PowerShell: set `$env:ASKDOCS_PROVIDER = "ollama"` before the same commands.)
+Ollama runs in its own container with no published port; only the askdocs container talks to it.
+Models are kept in the `ollama-models` volume. To use another model, pull it and set `ASKDOCS_MODEL`,
+for example `ASKDOCS_MODEL=qwen2.5:7b`. The first answer can take longer while the model loads.
+
+**5. Optional: online AI with your own API key**
+```bash
+OPENAI_API_KEY="your-key" ASKDOCS_PROVIDER=openai docker compose up -d
+```
+Set `OPENAI_BASE_URL` too if your provider is not OpenAI. You can also put these variables in a file named `.env`
+next to `docker-compose.yml`; keep that file private.
+
+---
+
 ## How citations are checked
 
 - The tool first finds the passages that best match the question (keyword search, on your computer).
@@ -175,6 +234,8 @@ export documents that are meant to be public.
 | `Cannot reach http://127.0.0.1:11434` | Start Ollama (open the app, or run `ollama serve`). |
 | `HTTP 401` | Your API key is wrong or missing for that provider. |
 | `skipped file.pdf: no text found` | The PDF is a scan. Export it with a text layer first. |
+| Docker: `address already in use` | Another program uses port 8765. Set `ASKDOCS_PORT=8766` and start again. |
+| Docker: `Cannot reach http://ollama:11434` | Start with `--profile ollama` and pull a model (Run with Docker, part 4). |
 
 ## Run the self-test
 
@@ -182,5 +243,15 @@ export documents that are meant to be public.
 python tests/test_e2e.py                     # offline mode
 python tests/test_e2e.py --provider ollama   # local AI
 ```
+
+## License tiers
+
+| License | Price | Sites |
+|---|---|---|
+| Single site | **$29** | 1 site |
+| 5 sites | **$59** | up to 5 sites |
+| Unlimited | **$129** | unlimited sites |
+
+Every license includes a 14-day refund, 6 months of support and 12 months of updates.
 
 Questions: LaborX (https://laborx.com/freelancers/users/id475124) · Remote · Worldwide

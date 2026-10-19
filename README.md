@@ -44,6 +44,22 @@ Or just use the live Pages link above.
 | **From** | **$149** (Starter) · $299 · $649 — delivery 4 / 6 / 10 days |
 | **Includes** | Your docs ingested · source citations · 7-day bugfix · you own the code |
 
+### Ask-your-docs self-service license
+
+The self-hosted tool ([`askdocs/`](askdocs/), with Docker support) and the install kit, for your own documents and sites.
+
+| License | Price | Sites |
+|---|---|---|
+| Single site | **$29** | 1 site |
+| 5 sites | **$59** | up to 5 sites |
+| Unlimited | **$129** | unlimited sites |
+
+Every license includes a **14-day refund**, **6 months of support** and **12 months of updates**.
+The code itself stays GPL-2.0-or-later; the license covers the packaged kit, support and updates.
+To get a license, email LaborX (https://laborx.com/freelancers/users/id475124) (crypto: USDC on BNB Chain or Base).
+
+The custom build above is a separate service.
+
 → [Packages & contact](https://github.com/nyyoautomation) · [LaborX — Nyyo Automation](https://laborx.com/freelancers/users/id475124)
 
 ## Hire me
@@ -73,6 +89,17 @@ pip install -r requirements.txt
 python askdocs.py index /path/to/your/docs
 python askdocs.py chat
 ```
+
+Or with Docker (no Python install needed). Browser chat on http://127.0.0.1:8765:
+
+```bash
+cd askdocs
+DOCS_DIR=/path/to/your/docs docker compose up -d --build
+# optional 100 % local AI with Ollama as a second service:
+DOCS_DIR=/path/to/your/docs ASKDOCS_PROVIDER=ollama docker compose --profile ollama up -d --build
+docker compose exec ollama ollama pull qwen2.5:1.5b
+```
+Details: [askdocs/INSTALL.md](askdocs/INSTALL.md#run-with-docker).
 
 ## WordPress plugin
 

@@ -34,7 +34,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'NYYO_DOCS_CHAT_VERSION', '1.1.0' );
 define( 'NYYO_DOCS_CHAT_OPT', 'nyyo_docs_chat_settings' );
 define( 'NYYO_DOCS_CHAT_INDEX_OPT', 'nyyo_docs_chat_index' );
-define( 'NYYO_DOCS_CHAT_DEMO_URL', 'https://nyyoautomation.github.io/nyyo-docs-chatbot/' );
 define( 'NYYO_DOCS_CHAT_MAX_POSTS', 500 );
 define( 'NYYO_DOCS_CHAT_CHUNK_WORDS', 120 );
 
@@ -48,7 +47,7 @@ require_once __DIR__ . '/includes/class-nyyo-docs-chat-index.php';
 function nyyo_docs_chat_defaults() {
 	return array(
 		'mode'         => 'local',
-		'bot_url'      => NYYO_DOCS_CHAT_DEMO_URL,
+		'bot_url'      => '',
 		'post_types'   => array( 'page', 'post' ),
 		'auto_inject'  => 0,
 		'position'     => 'bottom-right',
@@ -68,7 +67,11 @@ function nyyo_docs_chat_get_settings() {
 	if ( ! is_array( $saved ) ) {
 		$saved = array();
 	}
-	return array_merge( nyyo_docs_chat_defaults(), $saved );
+	$s = array_merge( nyyo_docs_chat_defaults(), $saved );
+	if ( 'external' === $s['mode'] && '' === (string) $s['bot_url'] ) {
+		$s['mode'] = 'local';
+	}
+	return $s;
 }
 
 /**
@@ -105,8 +108,12 @@ function nyyo_docs_chat_sanitize( $input ) {
 	$mode        = isset( $input['mode'] ) ? sanitize_key( $input['mode'] ) : 'local';
 	$out['mode'] = in_array( $mode, array( 'local', 'external' ), true ) ? $mode : 'local';
 	if ( ! empty( $input['bot_url'] ) ) {
-		$url            = esc_url_raw( trim( (string) $input['bot_url'] ), array( 'https', 'http' ) );
-		$out['bot_url'] = $url ? $url : NYYO_DOCS_CHAT_DEMO_URL;
+		$out['bot_url'] = esc_url_raw( trim( (string) $input['bot_url'] ), array( 'https', 'http' ) );
+	}
+	// External mode needs a URL set by the administrator. Without one, stay on this site.
+	if ( 'external' === $out['mode'] && '' === $out['bot_url'] ) {
+		$out['mode'] = 'local';
+		add_settings_error( NYYO_DOCS_CHAT_OPT, 'nyyo_docs_chat_no_url', __( 'External mode needs a chatbot URL. The answer source was set back to This site.', 'nyyo-docs-chatbot' ) );
 	}
 	$public_types = get_post_types( array( 'public' => true ) );
 	$types        = array();
@@ -219,8 +226,8 @@ function nyyo_docs_chat_render_settings() {
 				<tr>
 					<th scope="row"><label for="nyyo_bot_url"><?php esc_html_e( 'External chatbot URL', 'nyyo-docs-chatbot' ); ?></label></th>
 					<td>
-						<input name="<?php echo esc_attr( $opt ); ?>[bot_url]" type="url" id="nyyo_bot_url" value="<?php echo esc_attr( $s['bot_url'] ); ?>" class="regular-text" />
-						<p class="description"><?php esc_html_e( 'Only used in External mode. The default is the public demo with fictional data; replace it with your own chatbot page.', 'nyyo-docs-chatbot' ); ?></p>
+						<input name="<?php echo esc_attr( $opt ); ?>[bot_url]" type="url" id="nyyo_bot_url" placeholder="https://" value="<?php echo esc_attr( $s['bot_url'] ); ?>" class="regular-text" />
+						<p class="description"><?php esc_html_e( 'Only used in External mode, and empty by default. Enter the address of your own chatbot page, for example https://help.example.com/chat/.', 'nyyo-docs-chatbot' ); ?></p>
 					</td>
 				</tr>
 				<tr>
