@@ -55,15 +55,41 @@ I reply with scope, price and ETA. Crypto: USDC on BNB Chain or Base.
 
 ## Limits (honest)
 
-- This public demo uses **keyword search** over a fixed sample FAQ (fast & free). Client builds can use embeddings / LLM APIs when you provide a key or budget.
+- This public demo uses **keyword search** over a fixed sample FAQ (fast & free). The `askdocs` tool adds your own documents and optional AI answers (local Ollama or your own API key).
+- No OCR: scanned PDFs without a text layer are skipped.
 - Not a replacement for legal advice; sample store content is fictional.
 
+
+## Use it on your own documents (self-hosted)
+
+The [`askdocs/`](askdocs/) folder is a small tool that loads **your** PDF, DOCX, Markdown, TXT and HTML files,
+indexes them on your computer and answers with the file and page or section of each source.
+It works offline (no AI), with a 100 % local AI through Ollama, or with an online AI using your own API key.
+Step-by-step install for Mac, Windows and Linux: [askdocs/INSTALL.md](askdocs/INSTALL.md).
+
+```bash
+cd askdocs
+pip install -r requirements.txt
+python askdocs.py index /path/to/your/docs
+python askdocs.py chat
+```
+
+## WordPress plugin
+
+[`install-kit/wordpress/nyyo-docs-chatbot/`](install-kit/wordpress/nyyo-docs-chatbot/) answers visitors from the
+site's own published pages and posts, on the site's server, and links the source page of every answer.
+No external service by default; an external chatbot page can be embedded as an opt-in.
+GPLv2 or later. ZIP: `dist/nyyo-docs-chatbot-wordpress.zip`.
 
 ## Free install kit included
 
 No add-on fee. Downloads on the [live demo](https://nyyoautomation.github.io/nyyo-docs-chatbot/#install):
 
 - WordPress plugin ZIP (`dist/nyyo-docs-chatbot-wordpress.zip`)
-- Full kit ZIP (`dist/nyyo-docs-chatbot-install-kit.zip`) — Shopify snippet, universal script, Telegram/Slack/Discord templates
+- Full kit ZIP (`dist/nyyo-docs-chatbot-install-kit.zip`) — Ask-your-docs tool for your own documents, WordPress plugin, Shopify snippet, universal script, Telegram/Slack/Discord templates
 
 Anything not listed is **on request (free)**.
+
+## License
+
+GPL-2.0-or-later. See [LICENSE](LICENSE). Contact: LaborX (https://laborx.com/freelancers/users/id475124) · Remote · Worldwide

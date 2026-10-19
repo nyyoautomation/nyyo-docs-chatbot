@@ -4,7 +4,8 @@
 
 | Artifact | Status |
 |----------|--------|
-| WordPress plugin ZIP | Ready — download below / in `dist/` |
+| Ask-your-docs tool (your own PDF/DOCX/MD/TXT/HTML, citations) | Ready — `askdocs/`, see `askdocs/INSTALL.md` |
+| WordPress plugin ZIP (answers from your own pages, GPLv2+) | Ready — `dist/nyyo-docs-chatbot-wordpress.zip` |
 | Universal `<script>` embed (Wix/Webflow/HTML) | Ready |
 | Shopify theme snippet | Ready |
 | Telegram bot template | Ready |
